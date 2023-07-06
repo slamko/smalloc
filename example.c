@@ -68,8 +68,8 @@ void malloc_benchmark() {
 }
 
 int main() {
-    malloc_benchmark();
-    /* slab_benchmark(); */
+    /* malloc_benchmark(); */
+    slab_benchmark();
    
     return 0;
 }
