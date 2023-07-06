@@ -1,6 +1,6 @@
 Simple Slab memory allocator originally designed for [[https://github.com/slamko/slavOS][my hobby OS]] and extensively tested on it.
 
 In normal circumstances runs nearly as fast as malloc
-(with the restriction ofcoarse of allocating memory blocks with predefineds size).
+(with the restriction of course of allocating memory blocks with predefined size).
 
-Supposignly should perform better for allocating big object in long running application with fragmented heap, as it uses malloc only for allocating slab caches.
+Supposingly should perform better for allocating big object in long running application with fragmented heap, as it uses malloc only for allocating slab caches.
