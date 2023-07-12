@@ -201,7 +201,10 @@ struct slab_cache *slab_cache_create(size_t size) {
 }
 
 void slab_destroy_slab(struct slab_cache *cache, struct slab *slabs) {
-    for (; slabs; slabs = slabs->next) {
+    struct slab *prev = slabs;
+     
+    for (struct slab *next = NULL; slabs; slabs = next) {
+        next = slabs->next;
         free(slabs);
 
         if (cache->alignment) {
